@@ -46,7 +46,7 @@ class Automaton():
 
     def process(self, entry):
         if entry not in self.input_alphabet:
-            raise ValueError("Unspecified input, not accepted by this automaton!")
+            raise ValueError("Unspecified input. The automation cannot accept this.")
         self._exit_state(entry)
         self.__curr_state = self.__curr_state.process(entry)
         self._enter_state(entry)
